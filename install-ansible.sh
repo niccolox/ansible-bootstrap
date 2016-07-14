@@ -1,5 +1,5 @@
 #!/bin/sh
-ANSIBLE_STABLE_BRANCH=stable-2.1
+ANSIBLE_STABLE_BRANCH=devel
 
 if [ "$(id -u)" != "0" ]; then
   echo "Sorry, this script must be run as root."
