@@ -34,10 +34,10 @@ if [ $? -eq 1 ]; then
   echo "Installing Ansible build dependencies."
   if [ -z $ANSIBLE_DEBUG ]; then
     apt-get -qq --force-yes update > /dev/null 2>&1
-    apt-get -qq --force-yes install git python-setuptools python-dev > /dev/null 2>&1
+    apt-get -qq --force-yes install git python-setuptools python-dev python-paramiko > /dev/null 2>&1
   else
     apt-get --force-yes update
-    apt-get --force-yes install git python-setuptools python-dev
+    apt-get --force-yes install git python-setuptools python-dev python-paramiko
   fi
 
   if [ -z $branch ] && [ ! -z $ANSIBLE_BRANCH ]; then
